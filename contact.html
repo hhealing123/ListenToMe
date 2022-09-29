@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h2>Contact Page</h2>
+
+    <p>Please complete the prompts below if you would like to contact our team!</p>
+
+    <form action="/action_page.php">
+        <label for="name">Your full name</label><br>
+        <input type="text"><br><br>
+        <label for="Email">Email Address</label><br>
+        <input type="text"><br><br>
+        <form action="/action_page.php">
+            <label for="contactReason">Reason for contact</label><br>
+            <select name="contactReason" id="contactReason">
+                <option value="opt1">Product Issue</option>
+                <option value="opt2">Compliments to the chef</option>
+                <option value="opt3">Option 3</option>
+                <option value="opt4">Just wanted to say that ur a dingus</option>
+            </select><br><br>
+        <label for="details">Details</label><br>
+        <input type="text"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Thank you for contacting us, we will get back to you as soon as we can!</p>
+</body>
+
+</html>
