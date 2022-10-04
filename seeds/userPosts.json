@@ -1,32 +1,44 @@
 [
     {
-      "id": "0",
+      "id": "1",
       "subject": "Last nights Eminem concert was crazy!",
       "content": "I went over to the concert and they were selling some crazy booze. We got front row tickets, and the music was super loud and epic. He rapped like no one ever rapped before in the history of rap history. Very epico waow.",
       "user": "HarveyLeeIsTheOG"
     },
     {
-      "id": "1",
+      "id": "2",
       "subject": "Was jamming to George Harrison last night",
       "content": "If I could make my guitar weep like that, I would run out of tissues.",
       "user": "TylerGisForStrat"
     },
     {
-        "id": "2",
+        "id": "3",
         "subject": "In love again...",
         "content": "...But my girlfriend hates Country music. We've been dating for 93 years and I just found out she hates Willie Nelson. Should I break up or bite the bullet and cry myself to sleep.",
         "user": "JoseOteroCountryBoy"
     },
     {
-        "id": "3",
+        "id": "4",
         "subject": "I hate the Beatles, Fight me!",
         "content": "I don't understand why we like these Boomers. Every time they come on, I change the station.",
         "user": "TayBeBrunchin"
     },
     {
-        "id": "4",
+        "id": "5",
         "subject": "Unpopular Opinion - I like listening to mosquitos",
         "content": "I think the the most beautiful form of music is the noise of mosquitos. Each night before I go to bed, I stick my arm out the window until a mosquito bites me, where I will trap it in my room. I will then fall asleep to the buzz of their wings.",
         "user": "Mateto-tomato"
+    },
+    {
+        "id": "6",
+        "subject": "Fly like an eagle",
+        "content": "This reminds me of rides with my two dads and 3 moms, and my pet goat",
+        "user": "biggle-giggle"
+    },
+    {
+        "id": "7",
+        "subject": "The Beethoven ensemble was invigorating",
+        "content": "It reminded me of my childhood. This is good music to get freaky with.",
+        "user": "Kinky-Pinky92"
     }
   ]
