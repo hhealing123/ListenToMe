@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Comment, Post, User } = require('../models');
+const { Comment, userPost, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) =>{
     try {
-        const blogData = await Post.findAll({
+        const userPostData = await Post.findAll({
             include: [
                 {
                     model: User,
@@ -12,10 +12,10 @@ router.get('/', async (req, res) =>{
                 },
             ],
         });
-        const blogPosts = blogData.map((Post) => Post.get({ plain: true }));
-
+        // This will serialize the data, that is, turning data/variables into a representation such as string that allow to easily be written or read back from the database.
+        const userPosts = userPostData.map((Post) => Post.get({ plain: true }));
         res.render('homepage', {
-            blogPosts,
+            userPosts,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -23,13 +23,15 @@ router.get('/', async (req, res) =>{
     }
 });
 
-router.get('/topic/:id', withAuth, async (req, res) => {
+// User can see specific post and comments associated with the post by inserting the id of the subject.
+router.get('/subject/:id', withAuth, async (req, res) => {
+    // If user is not logged in, user will be redirected to the login page, thus unable to view the post until logged in.
     if (!req.session.logged_in) {
         res.redirect('/login');
         return;
     }
     try {
-        const blogData = await Post.findByPk(req.params.id, {
+        const userPostData = await Post.findByPk(req.params.id, {
             include: [
                 User,
                 {
@@ -42,10 +44,9 @@ router.get('/topic/:id', withAuth, async (req, res) => {
             ],
         });
 
-    const blogPosts = blogData.get({ plain:true });
-        console.log(blogPosts)
-    res.render('topic', {
-        blogPosts,
+    const userPosts = userPostData.get({ plain: true });
+    res.render('subject', {
+        userPosts,
         logged_in: req.session.logged_in
     });
     } catch (err) {
@@ -53,46 +54,40 @@ router.get('/topic/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/blogForm', withAuth, async(req,res) =>{
-    console.log('this is the blogForm route')
+router.get('/newPost', withAuth, async(req,res) =>{
+    // User will only be able to create a new post if they are logged in. Will redirect the user to the login page if they are not logged in.
     if (!req.session.logged_in) {
         res.redirect('/login');
         return;
     }
-    
-    res.render('blogForm', {
+    res.render('newPost', {
         logged_in: req.session.logged_in,
     });
 })
 
 router.get('/login', (req, res) => {
+    // If user is already signed in, then it will redirect user to the homepage.
     if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
-
     res.render('login');
 });
 
-
 router.post('/comment', async (req,res) => {
-    console.log ('this is the comment route')
-    console.log(req.body)
-    console.log(req.session.user_id)
         try {
             const commentData = await Comment.create({
             ...req.body,
             user_id: req.session.user_id
         });
-        console.log(commentData)
-        res.status(200).json({message: "comment successfully created"});
+        res.status(200).json({ message: "Your comment has been added to the post!" });
     } catch (err) {
-        res.status(400).json({ message: "error posting comment"})
+        res.status(400).json({ message: "An error occured when posting comment. Please try again..."})
     }
 })
 
 router.post('/logout', (req, res) => {
-    console.log('logout route before if statement')
+    // When user logs out, it will destroy user's session.
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
