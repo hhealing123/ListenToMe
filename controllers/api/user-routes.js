@@ -75,13 +75,3 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
-
-
-username, 
-password,
-email
-
-Id
-subject, 
-content, 
-discussion
