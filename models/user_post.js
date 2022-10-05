@@ -4,7 +4,7 @@ class userPost extends Model {}
 
 userPost.init(
   {
-    id: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -32,4 +32,4 @@ userPost.init(
   }
 );
 
-module.exports = User;
+module.exports = userPost;
