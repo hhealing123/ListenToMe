@@ -33,13 +33,7 @@ Comment.init(
                 key: 'id'
             },
         },
-        // name: {
-        //     type: DataTypes.STRING,
-        //     references: {
-        //         model: 'user',
-        //         key: 'name'
-        //     },
-        // },
+        
     },
     {
         sequelize,
