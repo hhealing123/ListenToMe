@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) =>{
     try {
-        const userPostData = await Post.findAll({
+        const userPostData = await userPost.findAll({
             include: [
                 {
                     model: User,
@@ -31,7 +31,7 @@ router.get('/subject/:id', withAuth, async (req, res) => {
         return;
     }
     try {
-        const userPostData = await Post.findByPk(req.params.id, {
+        const userPostData = await userPost.findByPk(req.params.id, {
             include: [
                 User,
                 {
