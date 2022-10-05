@@ -5,13 +5,10 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create({
-      username: req.body.username,
+      name: req.body.username,
       email: req.body.email,
-      password: req.body.password,
       id: req.body.id,
-      subject: req.body.subject,
-      content: req.body.content,
-      discussion: req.body.discussion,
+      password: req.body.password
     });
 
     req.session.save(() => {
@@ -20,7 +17,6 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -37,7 +33,7 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'The username and or password do not match any in our system. It might be our systems fault, but please try again anyways!' });
       return;
     }
 
@@ -46,7 +42,7 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'The username and or password do not match any in our system. It might be our systems fault, but please try again anyways!' });
       return;
     }
 
@@ -55,10 +51,9 @@ router.post('/login', async (req, res) => {
 
       res
         .status(200)
-        .json({ user: userData, message: 'You are now logged in!' });
+        .json({ user: userData, message: 'Heck yeah, youve hacked into the mainframe! Get after it!' });
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
