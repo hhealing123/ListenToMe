@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS listentome_db;
-CREATE DATABASE listentome_db;
+DROP DATABASE IF EXISTS user_db;
+CREATE DATABASE user_db;
