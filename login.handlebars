@@ -1,0 +1,23 @@
+{{!-- TEMPLATE FOR USER LOGIN PAGE --}}
+
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-9 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sign In To Listen to me</h5>
+                <form id="login" name="login" method="post" action="login">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="text form-control" name="email" type="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" class="form-control" />
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Sign In" />
+                    <a href="/register" class="btn btn-primary">Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
