@@ -88,11 +88,11 @@ This project is used to demonstrate Model View Controller (MVC) paradigm that us
 Our team initially had a great idea for the project which was to make a search engine that allows users to find music that they like, and save the songs in the playlist; however, we came across lots of issues while trying to make the initial project. The main issue that we encountered was that we tried using the 3rd party API to retrieve music data from Spotify which was only available for Spotify users; hence, we did not have full control of the API and was unable to manupulate data that we needed. In addition, setting up models and routes was another issue since we did not have enough knowledge to use API to create models and controllers based off the API that we tried to use. Therefore, to resolve the issues we slightly converted our initial plan and decided to make a project where users can communicate with other users by creating posts regards to music and leave comments on those posts. Although everything went smoothly after changing our project model, we faced some hardships when we came across to GitHub. We accidently pushed some files into main branch and some branches were behind in commits or ahead in commits which happened due to not pulling everytime we tried accessing the branches, as well as using `GitHub Desktop` that caused serious errors. However, we overcame the issue by communicating with the team members and ask questions if uncertain about how to pull or push to the designated branches. Another issue that we had was the models, especially creating relationship between different controllers. That is, using `belongsTo`, `hasMany`, and assigning `foreignKey`; we had to fully understand what was happening inside the controllers to create correct relationships in model files between each controllers. Overall, we would not say the project was easy; however, we did learn a lot of things, such as how to correctly use GitHub (To do and not to do), as well as following MVC paradigm; furthermore, we learned that it is very important to always communicate with the team members to see the best results.
 
 ## Utilized Resources
-[Express Session](https://expressjs.com/en/resources/middleware/session.html)
-[Sequelize Validations](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
-[GitHub](https://www.datacamp.com/tutorial/git-push-pull)
-[Sequelize Associations](https://sequelize.org/docs/v6/core-concepts/assocs/)
-[Handlebars.js Guide](https://handlebarsjs.com/guide/)
+* [Express Session](https://expressjs.com/en/resources/middleware/session.html)
+* [Sequelize Validations](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
+* [GitHub](https://www.datacamp.com/tutorial/git-push-pull)
+* [Sequelize Associations](https://sequelize.org/docs/v6/core-concepts/assocs/)
+* [Handlebars.js Guide](https://handlebarsjs.com/guide/)
 
 ## Contact
 
