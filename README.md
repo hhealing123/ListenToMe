@@ -4,10 +4,7 @@
 ## Table of Contents
 * [Description](#description)
 * [User Story](#user-story)
-* [Acceptance Criteria](#acceptance-criteria)
-* [Project Requirements](#project-requirements)
 * [Installation & Usage](#installation--usage)
-* [Project Demo](#project-demonstration)
 * [Final Thoughts](#final-thoughts)
 * [Utilized Resources](#utilized-resources)
 * [Contact](#contact)
@@ -20,50 +17,6 @@ Music is one of crucial element of everyday life, it is one of a way of expressi
 AS A user who loves listening to music 
 I WANT a application that allows me see other people's opinions on music 
 SO THAT I reply to the people's comments, share experiences, and stay connected with individuals. 
-```
-
-## Acceptance Criteria
-```
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in posts, comments, or contributors 
-THEN the data for each of these routes is displayed
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete data in my database
-```
-
-## Project Requirements
-```
-* Use Node.js and Express.js to create a RESTful API.
-
-* Use Handlebars.js as the template engine.
-
-* Use MySQL and the Sequelize ORM for the database.
-
-* Have both GET and POST routes for retrieving and adding new data.
-
-* Use at least one new library, package, or technology that we haven’t discussed.
-
-* Have a folder structure that meets the MVC paradigm.
-
-* Include authentication (express-session and cookies).
-
-* Protect API keys and sensitive information with environment variables.
-
-* Be deployed using Heroku (with data).
-
-* Have a polished UI.
-
-* Be responsive and interactive (i.e., accept and respond to user input).
-
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 ```
 
 ## Installation & Usage
@@ -81,8 +34,6 @@ Type `npm start` to initiate the project.
 
 This project is used to demonstrate Model View Controller (MVC) paradigm that uses `Sequelize ORM` for database, `Handlebars.js` as the template engine, `express-session` for authentication, as well as `express.js` for routing.
 ```
-
-## Project Demonstration
 
 ## Final Thoughts
 Our team initially had a great idea for the project which was to make a search engine that allows users to find music that they like, and save the songs in the playlist; however, we came across lots of issues while trying to make the initial project. The main issue that we encountered was that we tried using the 3rd party API to retrieve music data from Spotify which was only available for Spotify users; hence, we did not have full control of the API and was unable to manupulate data that we needed. In addition, setting up models and routes was another issue since we did not have enough knowledge to use API to create models and controllers based off the API that we tried to use. Therefore, to resolve the issues we slightly converted our initial plan and decided to make a project where users can communicate with other users by creating posts regards to music and leave comments on those posts. Although everything went smoothly after changing our project model, we faced some hardships when we came across to GitHub. We accidently pushed some files into main branch and some branches were behind in commits or ahead in commits which happened due to not pulling everytime we tried accessing the branches, as well as using `GitHub Desktop` that caused serious errors. However, we overcame the issue by communicating with the team members and ask questions if uncertain about how to pull or push to the designated branches. Another issue that we had was the models, especially creating relationship between different controllers. That is, using `belongsTo`, `hasMany`, and assigning `foreignKey`; we had to fully understand what was happening inside the controllers to create correct relationships in model files between each controllers. Overall, we would not say the project was easy; however, we did learn a lot of things, such as how to correctly use GitHub (To do and not to do), as well as following MVC paradigm; furthermore, we learned that it is very important to always communicate with the team members to see the best results.
