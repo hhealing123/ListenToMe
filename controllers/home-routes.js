@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Comment, userPost, User } = require('../models');
+const { Comment, BlogPost, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) =>{
     try {
-        const userPostData = await userPost.findAll({
+        const blogData = await BlogPost.findAll({
             include: [
                 {
                     model: User,
@@ -13,9 +13,10 @@ router.get('/', async (req, res) =>{
             ],
         });
         // This will serialize the data, that is, turning data/variables into a representation such as string that allow to easily be written or read back from the database.
-        const userPosts = userPostData.map((Post) => Post.get({ plain: true }));
+        const blogPosts = blogData.map((blogPost) => blogPost.get({ plain: true }));
+        
         res.render('homepage', {
-            userPosts,
+            blogPosts,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -24,14 +25,14 @@ router.get('/', async (req, res) =>{
 });
 
 // User can see specific post and comments associated with the post by inserting the id of the subject.
-router.get('/subject/:id', withAuth, async (req, res) => {
+router.get('/topic/:id', withAuth, async (req, res) => {
     // If user is not logged in, user will be redirected to the login page, thus unable to view the post until logged in.
     if (!req.session.logged_in) {
         res.redirect('/login');
         return;
     }
     try {
-        const userPostData = await userPost.findByPk(req.params.id, {
+        const blogData = await BlogPost.findByPk(req.params.id, {
             include: [
                 User,
                 {
@@ -44,9 +45,10 @@ router.get('/subject/:id', withAuth, async (req, res) => {
             ],
         });
 
-    const userPosts = userPostData.get({ plain: true });
-    res.render('subject', {
-        userPosts,
+    const blogPosts = blogData.get({ plain: true });
+
+    res.render('topic', {
+        blogPosts,
         logged_in: req.session.logged_in
     });
     } catch (err) {
@@ -54,13 +56,13 @@ router.get('/subject/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/newPost', withAuth, async(req,res) =>{
+router.get('/blogForm', withAuth, async(req,res) =>{
     // User will only be able to create a new post if they are logged in. Will redirect the user to the login page if they are not logged in.
     if (!req.session.logged_in) {
         res.redirect('/login');
         return;
     }
-    res.render('newPost', {
+    res.render('blogForm', {
         logged_in: req.session.logged_in,
     });
 })

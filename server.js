@@ -10,7 +10,7 @@ const helpers = require('./utils/helpers');
 const routes = require('./controllers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3006;
 
 const sess = {
   secret: 'ListenToMe Secret',

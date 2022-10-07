@@ -1,0 +1,24 @@
+<div class="divider"></div>
+<div class="container">
+    <div  style="font-weight:bold; padding:20px;">
+        <div class="col">
+                <div class="blue darken-3 " style="text-align:center; border-radius:20px; padding:2px; margin:20px;">
+                    <h1>Dashboard</h1>
+                    <h4>Below are your posts:</h4>
+                </div>
+        </div>
+        <div class="col blogList" style="align:center">
+            {{#each profile.blog_posts as |blog|}}
+            <h3>Topic: {{ blog.topic }}</h3>
+            <p>Post: {{ blog.content }}</p>
+            <p>Date: {{format_date blog.date_created }}</p>
+           
+            <a href="/dashboard/editPost/{{blog.id}}"> <button class="logout green waves-effect waves-light btn-large" style="font-weight:bold; padding-left:20px;" data-id="{{blog.id}}">REVISE</button></a>   
+            <button class="logout red darken-3 waves-effect waves-light btn-large" style="font-weight:bold; padding-left:20px;" data-id="{{blog.id}}">Delete</button>
+                
+            
+            {{/each}}
+        </div>
+    </div>
+</div>
+<script src="/js/delete-blog-post.js"></script>

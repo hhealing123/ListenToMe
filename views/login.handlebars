@@ -1,50 +1,53 @@
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <br /><br />
-    <h1 class="header center orange-text">Listen To Me</h1>
-    <div class="row center">
-      <h5 class="header col s12 light">
-        Find your music.
-        <br />
-        and discover a new love for new songs
-      </h5>
-      <form class="login">
-        <div class="form-group">
-          <label for="exampleInputEmail1" class="login login-left">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email-input"
-            placeholder="Email"
-          />
-        </div>
-        <div class="form-group">
-          <label
-            for="exampleInputPassword1"
-            class="login login-left"
-          >Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password-input"
-            placeholder="Password"
-          />
-        </div>
-        <button type="submit" class="btn btn-default">Login</button>
-      </form>
-      <br />
-      <p class="login">
-        Or sign up
-        <a class="thistle-color" href="/">here</a>
-      </p>
+
+<div class="divider"></div>
+<div class="row"></div>
+<div class="row container">
+  
+  <form  class="col s4 login-form yellow lighten-4">
+
+    <div style="margin:20px; align-items" class="row">
+      <h2 style="text-align:center;">Login</h2>
+      <div class="input-field col s12">
+        <input placeholder="Email" type="email" class="validate" id="email-login">
+        <label for="email">Email</label>
+      </div>
     </div>
-    <div class="row center">
-      <a
-        href="http://materializecss.com/getting-started.html"
-        id="download-button"
-        class="btn-large waves-effect waves-light light-blue"
-      >Get Started</a>
+
+    <div style="margin:20px;" class="row">
+      <div class="input-field col s12">
+        <input placeholder="password" type="password" class="validate" id="password-login">
+        <label for="password">Password</label>
+      </div>
     </div>
-    <br /><br />
-  </div>
+      <button class="blue darken-3 waves-effect waves-light btn-large" style="margin:20px; font-weight:bold; padding-left:20px;" type="submit" name="action">Submit</button>
+  </form>
+
+<div class="col s1"></div>
+
+  <form class="col s6 new-signup-form card-horizontal yellow lighten-4">
+
+    <div style="margin:20px;" class="row">
+      <h3 style="text-align:center;">Sign Up Here</h3>
+      <div class="input-field col s12">
+        <input placeholder="UserName" id="username-signup" type="text" class="validate">
+        <label for="first_name">User Name</label>
+      </div>
+    </div>
+
+
+    <div style="margin:20px;" class="row">
+      <div class="input-field col s12">
+        <input placeholder="Email" id="email-signup" type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+
+    <div style="margin:20px;" class="row">
+      <div class="input-field col s12">
+        <input placeholder="password" id="password-signup" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <button class="blue darken-3 waves-effect waves-light btn-large" style="margin:20px; font-weight:bold; padding-left:20px;" type="submit" name="action">Submit</button>
+  </form>
 </div>
