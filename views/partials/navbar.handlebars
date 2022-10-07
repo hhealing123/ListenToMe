@@ -1,0 +1,29 @@
+<div class="divider"></div>
+<nav class="nav-extended">
+    <div style="background-color: #DB996B;">
+        <a href="/" class="waves-effect waves-light btn-large" style="font-weight:bold; margin-left:20px; background-color:#A2C7F9;
+">Home Page</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Login/Logout</i></a>
+        <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Login</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <li><a href="/blogForm"><button type="submit" name="action" class="waves-effect waves-light btn-large" style="font-weight:bold; margin-left:20px; background-color:#A2C7F9;
+"> New Post</button></a></li>
+            <li><a href="/dashboard" style="font-weight:bold; margin-left:20px; background-color:#A2C7F9;
+" class="waves-effect waves-light btn-large">Previous Posts</a></li>
+            
+            {{#if logged_in}}
+                <li><a class="logout waves-effect waves-light btn-large" style="font-weight:bold; margin-left:20px; background-color:#A2C7F9;
+">Logout</a></li>
+            {{else}}
+                <li><a class="login waves-effect waves-light btn-large" style="font-weight:bold; margin-left:20px; background-color:#A2C7F9;
+">Login</a></li>
+            {{/if}}
+        </ul>
+    </div>
+    <div style="background-color:#DB996B;">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href=""></a></li>
+        </ul>
+    </div>
+</nav>

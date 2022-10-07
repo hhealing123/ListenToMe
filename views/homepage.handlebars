@@ -1,0 +1,11 @@
+<h3 class="center-align">ListenToMe</h3>
+<p class="center container yellow lighten-4 flow-text" style="border-radius:10px; padding:20px">Welcome to ListenToMe!
+    You will be able to post and comment about concerts and music. 
+    <br>
+    We are the Yelp of concerts and music.
+</p>
+<div class="container">
+{{#each blogPosts as |blogPost|}}
+{{> blog_post}}
+{{/each}}
+</div>
