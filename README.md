@@ -61,3 +61,5 @@ Jose Otero (ieagle71@gmail.com)
 
 Matteo Ramazzini (mramazzini123@gmail.com)
 ```
+
+Powerpoint presentation-https://docs.google.com/presentation/d/1UhJyVNaOUuOUTMWT99xfBm7eng3yut1i2rKai3s_pz4/edit?usp=sharing
