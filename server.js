@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-
+// Import sequelize connection, sequelize store, helpers, and routes
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const helpers = require('./utils/helpers');
@@ -35,6 +35,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// Sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Port initiated. Now listening at ${PORT}!`));
+  app.listen(PORT, () => {
+    console.log(`Port initiated. Now listening at ${PORT}!`);
+  });
 });
