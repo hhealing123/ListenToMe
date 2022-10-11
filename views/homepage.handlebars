@@ -1,18 +1,11 @@
-{{#if posts.length}}
-  {{#each posts as |post|}}
-    <a href="/post/{{post.id}}">
-      <div class="card">
-        <div class="card-header flex-row justify-space-between">
-          <div>{{post.post_title}}</div>
-          <div>Posted by
-            {{post.user.username}}
-            on
-            {{format_date post.createdAt}}</div>
-        </div>
-        <div class="card-body">
-          {{post.post_body}}
-        </div>
-      </div>
-    </a>
-  {{/each}}
-{{/if}}
+<h3 class="center-align">ListenToMe</h3>
+<p class="center container yellow lighten-4 flow-text" style="border-radius:10px; padding:20px">Welcome to ListenToMe!
+    You will be able to post and comment about concerts and music. 
+    <br>
+    We are the Yelp of concerts and music.
+</p>
+<div class="container">
+{{#each blogPosts as |blogPost|}}
+{{> blog_post}}
+{{/each}}
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card yellow lighten-2">
+        <h2>{{blogPosts.topic}}
+        </h2>
+        <div class="card-content hoverable">
+            {{blogPosts.content}}
+            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
+            <p>{{format_date blogPosts.date_created}}</p>
+            <p>Posted By: {{blogPosts.user.name}}</p>
+        </div>
+    </div>
+    <div class="row"></div>
+    {{#each blogPosts.comments as |comment|}}
+    <div class="card yellow lighten-4">
+        <div class="card-content hoverable">
+            <p>{{comment.response}}</p>
+            <p>Date Posted: {{format_date comment.date_created}}</p>
+            <p>By: {{comment.user.name}}</p>
+            <div class="divider"></div>
+            {{/each}}
+
+        </div>
+    </div>
+
+    <div class="row"></div>
+
+</div>
+
+{{>commentForm}}
