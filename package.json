@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/hhealing123/ListenToMe#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.0",
     "exphbs": "^1.2.0",
