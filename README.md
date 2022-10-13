@@ -55,7 +55,7 @@ Tyler Charro (tylercharro@gmail.com)
 
 Connor Banks (connortamminen@gmail.com)
 
-Tay Collins (msdavistoday@gmail.com)
+LaTavya (Tay) Collins (msdavistoday@gmail.com)
 
 Jose Otero (ieagle71@gmail.com)
 
